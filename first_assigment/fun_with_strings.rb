@@ -6,11 +6,9 @@ end
 
 def count_words(string)
   hash = {}
-  temp = string.gsub!(/\W|\_/," ").squeeze.split(" ")
+  temp = string.gsub!(/\W|\_/," ").strip!.split(" ")
   temp.each do |word|
     hash[word] = temp.count(word)
   end
-  hash
+  puts hash
 end
-
-
